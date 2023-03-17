@@ -25,7 +25,7 @@ function repeterImage2($N2) {
     {
         $result .= "<img src='http://my.mobirise.com/data/userpic/764.jpg' alt='image'>";
     }
-    return $result2;
+    return $result;
 }
 echo repeterImage(4);
 ?>  

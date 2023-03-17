@@ -1,30 +1,9 @@
-<?php
-function formaterDateFr($date) {
-    // Conversion de la date au format timestamp
-    $timestamp = strtotime($date);
-
-    // Création de la date en français
-    $jour = date('l', $timestamp);
-    $num_jour = date('j', $timestamp);
-    $nom_mois = date('F', $timestamp);
-    $annee = date('Y', $timestamp);
-
-    // Tableaux des traductions en français
-    $jours = array('Monday' => 'lundi', 'Tuesday' => 'mardi', 'Wednesday' => 
-    'mercredi', 'Thursday' => 'jeudi', 'Friday' => 'vendredi', 'Saturday' => 'samedi', 'Sunday' => 'dimanche');
-    $mois = array('January' => 'janvier', 'February' => 'février', 'March' => 'mars', 'April' => 'avril',
-     'May' => 'mai', 'June' => 'juin', 'July' => 'juillet', 'August' => 'août', 'September' => 'septembre', 'October' => 'octobre',
-      'November' => 'novembre', 'December' => 'décembre');
-
-    // Affichage de la date en français
-    $result = $jours[$jour] . ' ' . $num_jour . ' ' . $mois[$nom_mois] . ' ' . $annee;
-    return $result;
-}
-
-$result = formaterDateFr("2022-07-02");
-echo $result;
-?>
-exo suivant <br/>
+<h1>Exercice 12</h1>
+<p>La fonction var_dump($variable) permet d’afficher les informations d’une variable.
+Soit le tableau suivant :
+$tableauValeurs=array(true,"texte",10,25.369,array("valeur1","valeur2"));
+A l’aide d’une boucle, afficher les informations des variables contenues dans le tableau.</p>
+<h2>Résulat</h2>
 <?php
 function variableDump($array)
 {
