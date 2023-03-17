@@ -5,33 +5,46 @@ class Voiture {
     private $_modele;
     private $_nbPortes;
     private $_vitesseActuelle;
-    private $_demarrer = false; 
-    public function __construct($_marque, $_modele, $_nbPortes) 
+    private $demarrer = false; 
+    public function __construct($marque, $modele, $nbPortes) 
     {
-        $this->_marque = $_marque;
-        $this->_modele = $_modele;
-        $this->_nbPortes = $_nbPortes;
+        $this->_marque = $marque;
+        $this->_modele = $modele;
+        $this->_nbPortes = $nbPortes;
         $this->_vitesseActuelle = 0;
     }
     //-------------------------------------------------------setters --------------------------------------------------------------------------------------
-    public function set_demarrer($on)
+    public function setDemarrer($value)
     {
-        $this->_demarrer = $on;
+        $this->demarrer = $value;
     }
-    public function set_vitesseActuelle($vitesse) 
+    public function setVitesseActuelle($vitesse) 
     {
         $this->_vitesseActuelle = $vitesse;
     }
-    public function _demarrer() 
+    public function demarrer() 
     {
-        $this->set_demarrer(true);
+        $this->setDemarrer(true);
         $result = "Le véhicule " .$this->_marque . " ". $this->_modele. " démarre.<br>";
         return $result;
     }
+    public function setMarque($marque)
+    {
+        $this->_marque = $marque;
+    }
+    public function setModele($modele)
+    {
+        $this->_modele = $modele;
+    }
+    public function setNbPortes($nbPortes)
+    {
+        $this->_nbPortes = $nbPortes;
+    }
 
+    
     public function accelerer($vitesse) 
     {
-        if ($this->_demarrer == true)
+        if ($this->demarrer == true)
         {
         $this->_vitesseActuelle += $vitesse;  
         $result = "Le véhicule ".$this->_marque ." accélère pour atteindre " . $this->_vitesseActuelle . " km/h.<br>";
@@ -46,15 +59,13 @@ class Voiture {
             return $result;
         }
     }
-
     public function stopper() 
     {
         $this->_vitesseActuelle = 0;
-        $this->_demarrer = false;
+        $this->demarrer = false;
         $result = "Le véhicule ". $this->_marque ." est à l'arrêt.<br>";
         return $result;
     }
-
     public function afficher($numero) 
     {
         $result = "<br>Info du véhicule ".$numero."<br>";
@@ -62,7 +73,7 @@ class Voiture {
         $result .= "Nom et modèle : " . $this->_marque ." " .$this->_modele ."<br>";
         $result .= "Nombre de portes : " . $this->_nbPortes . "<br>";
         $result .= "Vitesse actuelle : " . $this->_vitesseActuelle . " km/h<br>";
-        if ($this->_demarrer) {
+        if ($this->demarrer) {
             $result .= "Le véhicule ".$this->_marque." est démarré";
         } else {
             $result .= "Le véhicule ".$this->_marque." est arrêté";
@@ -70,33 +81,34 @@ class Voiture {
         $result .= "<br>";
         return $result;
     }
-    public function afficher_vitesseActuelle()
+    public function afficherVitesseActuelle()
     {
         $result=" La vitesse du véhicule ".$this->_marque. " ". $this->_modele. " est de ".$this->_vitesseActuelle." km/h.<br>";
         return $result;
     }
 
-    //--------------------------------------------Getters -------------------------------------------------------------------------------------
-
-    public function get_demarrer()
+    /*--------------------------------------------Getters -------------------------------------------------------------------------------------*/
+    public function getDemarrer()
     {
-        return $this->_demarrer;
+        return $this->demarrer;
     }
-    public function get_marque() 
+    public function getMarque() 
     {
         return $this->_marque;
     }
-    public function get_modele() 
+    public function getModele() 
     {
         return $this->_modele;
     }
-    public function get_nbPortes() 
+    public function getNbPortes() 
     {
         return $this->_nbPortes;
     }
-    public function get_vitesseActuelle()
+    public function getVitesseActuelle()
     {
         return $this->_vitesseActuelle;
     }
 }
-//----------------------------------------------------------------------------------------------------------------------------------------------
+/*---------------------------------------------------------------------------------------------------------------------------------------------*/
+
+

@@ -1,6 +1,4 @@
-
 <?php
-
 require_once('Voiture.php');
 $v1 = new Voiture("Peugeot", "408", 5);
 $v2 = new Voiture("Citroën", "C4", 3);
