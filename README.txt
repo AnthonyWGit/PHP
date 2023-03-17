@@ -1,1 +1,1 @@
-Creating fold to put PHP Exercices in it.
+Creating folder to put PHP Exercices in it.
