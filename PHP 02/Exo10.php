@@ -8,32 +8,32 @@ Le formulaire devra également comporter un bouton permettant de le soumettre à
 <?php
 function afficherFormulaire()
 {
-    $form = "<form action='#' method='POST'>";
+    $result = "<form action='#' method='POST'>";
 
     // Champ nom
-    $form .= "<label for='nom'>Nom :</label><br>";
-    $form .= "<input type='text' id='nom' name='nom'><br>";
+    $result .= "<label for='nom'>Nom :</label><br>";
+    $result .= "<input type='text' id='nom' name='nom'><br>";
 
     // Champ prénom
-    $form .= "<label for='prenom'>Prénom :</label><br>";
-    $form .= "<input type='text' id='prenom' name='prenom'><br>";
+    $result .= "<label for='prenom'>Prénom :</label><br>";
+    $result .= "<input type='text' id='prenom' name='prenom'><br>";
 
     // Champ adresse e-mail
-    $form .= "<label for='email'>Adresse e-mail :</label><br>";
-    $form .= "<input type='email' id='email' name='email' placeholder='email' value=''><br>";
+    $result .= "<label for='email'>Adresse e-mail :</label><br>";
+    $result .= "<input type='email' id='email' name='email' placeholder='email' value=''><br>";
 
     // Champ ville
-    $form .= "<label for='ville'>Ville :</label><br>";
-    $form .= "<input type='text' id='ville' name='ville'><br>";
+    $result .= "<label for='ville'>Ville :</label><br>";
+    $result .= "<input type='text' id='ville' name='ville'><br>";
 
     // Champ sexe
-    $form .= "<label for='sexe'>Sexe :</label><br>";
-    $form .= "<input type='radio' id='homme' name='sexe' value='homme'> <label for='homme'>Homme</label>";
-    $form .= "<input type='radio' id='femme' name='sexe' value='femme'> <label for='femme'>Femme</label><br>";
+    $result .= "<label for='sexe'>Sexe :</label><br>";
+    $result .= "<input type='radio' id='homme' name='sexe' value='homme'> <label for='homme'>Homme</label>";
+    $result .= "<input type='radio' id='femme' name='sexe' value='femme'> <label for='femme'>Femme</label><br>";
 
     // Champ formation
-    $form .= "<label for='formation'>Formation :</label><br>";
-    $form .= "<select id='formation' name='formation'>
+    $result .= "<label for='formation'>Formation :</label><br>";
+    $result .= "<select id='formation' name='formation'>
                 <option value='developpeur'>Développeur Logiciel</option>
                 <option value='designer'>Designer Web</option>
                 <option value='integrator'>Intégrateur</option>
@@ -41,11 +41,11 @@ function afficherFormulaire()
               </select><br>";
 
     // Bouton submit
-    $form .= "<input type='submit' name='submit' value='Envoyer'>";
+    $result .= "<input type='submit' name='submit' value='Envoyer'>";
 
-    $form .= "</form>";
+    $result .= "</form>";
 
-    return $form;
+    return $result;
 }
 
 echo afficherFormulaire();
