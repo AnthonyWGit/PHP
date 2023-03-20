@@ -5,12 +5,13 @@ class Voiture
 {
     protected $_marque;
     protected $_modele;
-    protected $_type ="thermique";
+    protected $_type ;
     /*__construct pour voiture thermique*/
     public function __construct($marque, $modele)
     {
         $this->_marque = $marque;
         $this->_modele = $modele;
+        $this->_type = "thermique";
     }
     /*-----------setters--------------*/
     public function setMarque($marque)
@@ -50,13 +51,12 @@ class Voiture
 class VoitureElectrique extends Voiture
 {
     protected $_autonomie;
-    protected $_type = "électrique";
-
     /*__construct pour voiture électrique*/
     public function __construct($marque, $modele, $autonomie)
     {
         parent::__construct($marque, $modele);
         $this->_autonomie = $autonomie;
+        $this->_type = "électrique";
     }
     /*------getters--------*/
     public function setAutonomie($autonomie)
