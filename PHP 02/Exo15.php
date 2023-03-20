@@ -1,5 +1,5 @@
 <?php
-function verifierEmail($email)
+function verifierEmail(string $email)
 {
 
     if (filter_var($email, FILTER_VALIDATE_EMAIL))
