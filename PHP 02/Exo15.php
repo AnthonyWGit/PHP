@@ -4,7 +4,7 @@ function verifierEmail($email)
 
     if (filter_var($email, FILTER_VALIDATE_EMAIL))
     {
-        $result = $email. " est un email valide.";
+        $result = $email. " est un email valide <br>.";
         return $result;
     }
     else
@@ -19,7 +19,7 @@ function verifierEmail($email)
     }
     else
     {
-        $result = $email ." n'est pas un format valide.";
+        $result = $email ." n'est pas un format valide<br>.";
         return $result;
     }
 }
