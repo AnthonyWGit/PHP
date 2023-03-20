@@ -5,7 +5,7 @@ class Voiture
 {
     protected $_marque;
     protected $_modele;
-    protected $_type;
+    protected $_type ="thermique";
     /*__construct pour voiture thermique*/
     public function __construct($marque, $modele)
     {
@@ -41,14 +41,17 @@ class Voiture
     /*------Méthodes------*/
     public function getInfos()
     {
-        $result = "Marque : " .$this->_marque. "<br>";
-        $result .= "Modèle : " .$this->_modele. "<br>";
+        $result = "Voiture ".$this->_type. ".<br>";
+        $result .= "Marque : " .$this->_marque. ".<br>";
+        $result .= "Modèle : " .$this->_modele. ".<br>";
         return $result;
     }
 }
 class VoitureElectrique extends Voiture
 {
-    private $_autonomie;
+    protected $_autonomie;
+    protected $_type = "électrique";
+
     /*__construct pour voiture électrique*/
     public function __construct($marque, $modele, $autonomie)
     {
@@ -65,11 +68,13 @@ class VoitureElectrique extends Voiture
     {
         return $this->_autonomie;
     }
+    /*-------Méthodes-----------*/
     public function getInfos()
     {
-        $result = "Marque : " .$this->_marque. "<br>";
-        $result .= "Modèle : " .$this->_modele. "<br>";
-        $result .= "Autonomie :" .$this->_autonomie. " Heures <br>";
+        $result = "Voiture ".$this->_type. ".<br>";
+        $result .= "Marque : " .$this->_marque. ".<br>";
+        $result .= "Modèle : " .$this->_modele. ".<br>";
+        $result .= "Autonomie :" .$this->_autonomie. " Heures .<br>";
         return $result;
     }
 }
