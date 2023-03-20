@@ -3,44 +3,44 @@
 class Voiture
 // private ne nous permet pas d'heriter de $marque et $modele. On utilise pas de getter ni de setter donc on utilise le keyword protected
 {
-    protected $_marque;
-    protected $_modele;
-    protected $_type ;
+    protected string $_marque;
+    protected string $_modele;
+    protected string $_type ;
     /*__construct pour voiture thermique*/
-    public function __construct($marque, $modele)
+    public function __construct(string $marque, string $modele)
     {
         $this->_marque = $marque;
         $this->_modele = $modele;
         $this->_type = "thermique";
     }
     /*-----------setters--------------*/
-    public function setMarque($marque)
+    public function setMarque(string $marque)
     {
         $this->_marque = $marque;
     }
-    public function setModele($modele)
+    public function setModele(string $modele)
     {
         $this->_modele = $modele;
     }
-    public function setTtype($type)
+    public function setTtype(string $type)
     {
         $this->_type = $type;
     }
     /*----------getters----------*/
-    public function getMarque()
+    public function getMarque() : string
     {
         return $this->_marque;
     }
-    public function getModele()
+    public function getModele() : string
     {
         return $this->_modele;
     }
-    public function getType()
+    public function getType() : string
     {
         return $this->_type; 
     }
     /*------Méthodes------*/
-    public function getInfos()
+    public function getInfos() : string
     {
         $result = "Voiture ".$this->_type. ".<br>";
         $result .= "Marque : " .$this->_marque. ".<br>";
@@ -52,24 +52,24 @@ class VoitureElectrique extends Voiture
 {
     protected $_autonomie;
     /*__construct pour voiture électrique*/
-    public function __construct($marque, $modele, $autonomie)
+    public function __construct(string $marque, string $modele, int $autonomie)
     {
         parent::__construct($marque, $modele);
-        $this->_autonomie = $autonomie;
+        $this->_autonomie =$autonomie;
         $this->_type = "électrique";
     }
     /*------getters--------*/
-    public function setAutonomie($autonomie)
+    public function setAutonomie(int $autonomie) 
     {
         $this->_autonomie = $autonomie;
     }
     /*-----setters------*/
-    public function getAutonomie()
+    public function getAutonomie() : int 
     {
         return $this->_autonomie;
     }
     /*-------Méthodes-----------*/
-    public function getInfos()
+    public function getInfos() : string
     {
         $result = "Voiture ".$this->_type. ".<br>";
         $result .= "Marque : " .$this->_marque. ".<br>";
