@@ -6,13 +6,14 @@ class Voiture
     private $_modele;
     private $_nbPortes;
     private $_vitesseActuelle;
-    private $_demarrer = false; 
+    private $_demarrer; 
     public function __construct($marque, $modele, $nbPortes) 
     {
         $this->_marque = $marque;
         $this->_modele = $modele;
         $this->_nbPortes = $nbPortes;
         $this->_vitesseActuelle = 0;
+        $this->_demarrer = false;
     }
     //-------------------------------------------------------setters --------------------------------------------------------------------------------------
     public function setDemarrer($value)
