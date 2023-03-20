@@ -61,9 +61,17 @@ class Voiture
     /*--------------------------------------------------*Methods*-----------------------------------------------------------*/
     public function demarrer() : string
     {
-        $this->setDemarrer(true);
-        $result = "Le véhicule $this démarre.<br>";
-        return $result;
+        if ($this->_demarrer)
+        {
+            $result = "Le véhicule $this est déjà démarré.<br>";
+            return $result;
+        }
+        else
+        {
+            $this->setDemarrer(true);
+            $result = "Le véhicule $this démarre.<br>";
+            return $result;            
+        }
     }  
     public function accelerer($vitesse) : string
     {
@@ -77,17 +85,37 @@ class Voiture
         }
         else
         {
-            $result = "Le véhicule veut accélérer de ".$vitesse. "km/h.<br>";
+            $result = "Le véhicule veut accélérer de ".$vitesse. " km/h.<br>";
             $result .= "Le véhicule $this doit démarrer pour accélérer. <br>";
             return $result;
         }
     }
     public function stopper() : string
     {
-        $this->_vitesseActuelle = 0;
-        $this->_demarrer = false;
-        $result = "Le véhicule $this est à l'arrêt.<br>";
-        return $result;
+        if ($this->_demarrer)
+        {
+            if ($this->_vitesseActuelle == 0)
+                {
+                    $this->_demarrer = false;
+                    //$result = "Le véhicule  $this a le moteur ALLUMÉ mais le véhicule <strong>$this</strong> est <strong>déjà</strong> à l'arrêt. Moteur maintenant = OFF.<br>";
+                    $result ="Le véhicule $this coupe le contact et reste stationné.<br>";
+                    return $result;
+                }
+            else
+                {
+                    $this->_vitesseActuelle = 0;
+                    $this->_demarrer = false;
+                    $result = "Le véhicule $this est à l'arrêt et le moteur est coupé.<br>";
+                    return $result;
+                }
+        }
+        else
+        {
+            $this->_vitesseActuelle = 0;
+            $this->_demarrer = false;
+            $result = "Le véhicule $this est à l'arrêt mais le moteur est ETEINT. Le moteur est maintenant OFF<br>.";
+            return $result;
+        }
     }
     public function afficher($numero) : string
     {
@@ -113,7 +141,13 @@ class Voiture
     {
         if ($this->_demarrer)
         {
-            if ($vitesse > $this->_vitesseActuelle)
+            if ($this->_vitesseActuelle == 0)
+            {
+                $result ="Ralentir : Le véhicule $this est <em>déjà</em> à l'arrêt. </br>";
+                return $result;
+            }
+
+            else if ($vitesse > $this->_vitesseActuelle)
                 {
                     $this->_vitesseActuelle = 0;
                     $result = "Le véhicule $this freine pour s'arrêter.<br>";
