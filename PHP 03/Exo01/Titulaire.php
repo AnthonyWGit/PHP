@@ -14,6 +14,7 @@ class Titulaire
         $this->_ville = $ville;
         $this->_comptesEnsemble = [];
     }
+    /*-------setters------------*/
     public function setNom(string $nom)
     {
         $this->_nom = $nom;
@@ -30,7 +31,11 @@ class Titulaire
     {
         $this->_ville = $ville;
     }
-
+    public function setComptesEnsemble(array $comptesEnsemble)
+    {
+        $this->_comptesEnsemble = $comptesEnsemble;
+    }
+/*****------------GETTERS----------------- */
     public function getNom() : string
     {
         return $this->_nom;
@@ -47,6 +52,13 @@ class Titulaire
     {
         return $this->_ville;
     }
+    public function getComptesEnsemble() : array
+    {
+        return $this->_comptesEnsemble;
+    }
+    /*-----------METHODES-----------------*/
+
+
     public function ajouterCompteBancaire(Compte $compte)
     {
         array_push($this->_comptesEnsemble, $compte);

@@ -49,6 +49,7 @@ class Compte
         return $this->_titulaire;
     }
     /*------------------METHODES--------------------*/
+    /*Note : testez toutes les possibilités absurdes */
     public function créditer(float $argent) : string
     {
         if ($argent < 0)
