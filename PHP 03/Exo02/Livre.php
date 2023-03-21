@@ -1,25 +1,23 @@
 <?php
 class Livre
 {
-    private string $_auteur;
+    private Auteur $_auteur;
     private string $_titre;
     private int $_pages;
     private string $_annéeParution;
     private float $_prix;
 
-    public function __construct(string $titre,int $pages, string $_nnéeParution, float $prix, string $auteur)
+    public function __construct(string $titre,int $pages, string $_annéeParution, float $prix, Auteur $auteur)
     {
         $this->_auteur = $auteur;
         $this->_prix = $prix;
-        $this->_annéeParution = $_nnéeParution;
+        $this->_annéeParution = $_annéeParution;
         $this->_pages = $pages;
         $this->_titre = $titre;
+        $this->_auteur->addLivre($this);
     }
     /*-----------SETTERS------------*/
-    public function setAuteur(string $auteur)
-    {
-        $this->_auteur = $auteur;
-    }
+
     public function setTitre(string $titre)
     {
         $this->_titre = $titre;
@@ -28,9 +26,9 @@ class Livre
     {
         $this->_pages = $pages;
     }
-    public function setAnnéeParution(string $_annéeParution)
+    public function setAnnéeParution(string $annéeParution)
     {
-        $this->_annéeParution = $_annéeParution;
+        $this->_annéeParution = $annéeParution;
     }
     public function setPrix(float $prix)
     {
@@ -38,7 +36,7 @@ class Livre
     }
 
     /*------------------GETTTERS*------------------*/
-    public function getAuteur() : string
+    public function getAuteur() : Auteur
     {
         return $this->_auteur;
     }
@@ -64,9 +62,9 @@ class Livre
     {
         $result = "Auteur : ".$this->_auteur. ".<br>";
         $result .= "Titre : ".$this->_titre. ".<br>";
-        $result .= "Nombre de pages : ".$this->_pages." .<br>";
-        $result .= "Année de parution : ".$this->_annéeParution. " .<br>";
-        $result .= "Prix : ".$this->_prix." .<br>";
+        $result .= "Nombre de pages : ".$this->_pages.".<br>";
+        $result .= "Année de parution : ".$this->_annéeParution. ".<br>";
+        $result .= "Prix : ".$this->_prix." $.<br>";
         return $result;
     }
 }
