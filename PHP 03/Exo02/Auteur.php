@@ -4,7 +4,7 @@ class Auteur
     private string $_nom;
     private string $_prenom;
 
-    private function __construct(string $nom, string $prenom)
+    public function __construct(string $nom, string $prenom)
     {
         $this->_nom = $nom;
         $this->_prenom = $prenom;
