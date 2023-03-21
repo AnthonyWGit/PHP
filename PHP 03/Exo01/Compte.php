@@ -87,7 +87,6 @@ class Compte
             return $result;
         }
     }
-
     public function virement (float $argent, object $compte) : string
     {   
         if ($argent < 0)
@@ -105,11 +104,11 @@ class Compte
             $this->_solde =-$argent;
             $compte->créditer($argent);
             $result = " Virement : <strong> Votre compte $this->_nomCompte a été débité de $argent ".$this->_devise. ". 
-            Votre compte $compte a été crédité de ".$argent." ".$this->_devise .".<br>";
+            Votre compte $compte a été crédité de ".$argent." ".$this->_devise .".</strong><br>";
             return $result;
         }    
     }
-    public function infosCompte()
+    public function infosCompte() : string
     {
         $result = "Nom du compte : ".$this->_nomCompte."<br>";
         $result .="Solde $this.<br>";
@@ -118,7 +117,7 @@ class Compte
     }
     public function __toString()
     {
-        return $this->_solde." ".$this->_devise;
+        return $this->_nomCompte." ".$this->_solde." ".$this->_devise;   
     }
 }
 

@@ -57,13 +57,10 @@ class Titulaire
         return $this->_comptesEnsemble;
     }
     /*-----------METHODES-----------------*/
-
-
     public function ajouterCompteBancaire(Compte $compte)
     {
         array_push($this->_comptesEnsemble, $compte);
     }
-
     public function infosTitulaire() : string
     {
         $age = date_diff(date_create($this->_dateNaissance), date_create('today'))->y;
