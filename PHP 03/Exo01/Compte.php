@@ -61,7 +61,7 @@ class Compte
         {
         $this->_solde += $argent;
         $result = "Votre compte a été crédité de $argent ".$this->_devise."<br> ";
-        $result.= "Nouveay solde : $this.<br>";
+        $result.= "Nouveau solde : ".$this->_solde."".$this->_devise." <br>";
         return $result;
         }
 
@@ -111,13 +111,12 @@ class Compte
     public function infosCompte() : string
     {
         $result = "Nom du compte : ".$this->_nomCompte."<br>";
-        $result .="Solde $this.<br>";
+        $result .="Solde ".$this->_solde." ".$this->_devise." <br>";
         $result .="Titulaire du compte : ".$this->_titulaire."<br><br>";
         return $result;
     }
-    public function __toString()
+    public function __toString() : string
     {
         return $this->_nomCompte." ".$this->_solde." ".$this->_devise;   
     }
 }
-
