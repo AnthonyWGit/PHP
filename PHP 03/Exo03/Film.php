@@ -19,19 +19,11 @@ Class Film
         $this->genre = $genre;
         $this->acteurs = [];
     }
-      public function ajouterRole($name) 
+      public function ajouterActeur($acteur, $role) 
     {
-        $role = new Role($name);
-        $this->roles[] = $role;
-        return $role;
+        $this->casting[] = ['actor' => $acteur, 'role' => $role];
     }
-    function ajouterActeur($acteur, $role) {
-        if (!isset($this->acteurs[$acteur->nom])) {
-            $this->acteurs[$acteur->nom] = $acteur;
-        }
-        $this->acteurs[$acteur->nom]->ajouterRole($role, $this);
-    }
-    
+
     public function getActorsForRole($roleName) 
     {
         foreach ($this->roles as $role) 
