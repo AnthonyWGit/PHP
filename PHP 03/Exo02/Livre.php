@@ -6,7 +6,6 @@ class Livre
     private int $_pages;
     private string $_annéeParution;
     private float $_prix;
-
     public function __construct(string $titre,int $pages, string $_annéeParution, float $prix, Auteur $auteur)
     {
         $this->_auteur = $auteur;
@@ -17,7 +16,6 @@ class Livre
         $this->_auteur->addLivre($this);
     }
     /*-----------SETTERS------------*/
-
     public function setTitre(string $titre)
     {
         $this->_titre = $titre;
@@ -34,7 +32,6 @@ class Livre
     {
         $this->_prix = $prix;
     }
-
     /*------------------GETTTERS*------------------*/
     public function getAuteur() : Auteur
     {
@@ -57,7 +54,7 @@ class Livre
         return $this->_prix;
     }
     /*------------METHODES((((((((((((()))))))))))))*/
-
+    // FORMATAGE
     public function __toString()
     {
         $result = "Auteur : ".$this->_auteur. ".<br>";
