@@ -1,15 +1,11 @@
 <?php
-class Role {
-    public $name;
-    public $actors = array();
-
-    public function __construct($name)
+class Role 
+{
+    public string $name;
+    public Acteur $acteurs;
+    public function __construct($name, Acteur $acteurs)
     {
         $this->name = $name;
-    }
-    public function addActor($actor)
-    {
-        $this->actors[] = $actor;
-        $actor->roles[] = $this;
+        $this->acteurs->addRole($this);
     }
 }

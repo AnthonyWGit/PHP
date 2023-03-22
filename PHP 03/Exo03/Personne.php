@@ -1,5 +1,6 @@
 <?php
-class Personne {
+class Personne 
+{
     protected $nom;
     protected $prenom;
     protected $sexe;
