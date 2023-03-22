@@ -1,5 +1,5 @@
 <?php
-Class Film
+class Film
 {
     protected string $titre;
     protected string $dateSortie;

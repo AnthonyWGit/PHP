@@ -1,32 +1,33 @@
 <?php
 class Personne 
 {
-    protected $nom;
-    protected $prenom;
-    protected $sexe;
-    protected $dateNaissance;
+    protected string $_nom;
+    protected string $_prenom;
+    protected string $_sexe;
+    protected string $_dateNaissance;
     public function __construct($nom, $prenom, $sexe, $dateNaissance)
     {
-        $this->nom = $nom;
-        $this->prenom = $prenom;
-        $this->sexe = $sexe;
-        $this->dateNaissance = $dateNaissance;
+        $this->_nom = $nom;
+        $this->_prenom = $prenom;
+        $this->_sexe = $sexe;
+        $this->_dateNaissance = $dateNaissance;
     }
-    public function getNom() 
+// GETTERS 
+    public function getNom() : string 
     {
-        return $this->nom;
+        return $this->_nom;
     }
-    public function getPrenom() 
+    public function getPrenom() : string
     {
-        return $this->prenom;
+        return $this->_prenom;
     }  
-    public function getSexe() 
+    public function getSexe() : string
     {
-        return $this->sexe;
+        return $this->_sexe;
     }
-    public function getDateNaissance() 
+    public function getDateNaissance() : string
     {
-        return $this->dateNaissance;
+        return $this->_dateNaissance;
     }
 }
 ?>
