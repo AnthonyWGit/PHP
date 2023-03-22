@@ -64,11 +64,9 @@ class Film
     }
     public function afficherReal()
     {
-        $result = "Réal : ".$this->_realisateur. ".<br>";
-        $result .= "Date Parution : ".$this->_dateSortie.".<br>";
-        $result .= "Genre : ".$this->_genre. ".<br>";
-        $result .= "Nom du film : ".$this->_titre." $.<br>";
+        $result = $this->_realisateur->getPrenom();
         return $result;
     }
+
 }
 ?>
