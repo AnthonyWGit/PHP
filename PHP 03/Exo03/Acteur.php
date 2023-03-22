@@ -19,3 +19,4 @@ class Acteur extends Personne
     return $this->roles;
   }
 }
+?>

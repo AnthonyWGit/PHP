@@ -16,4 +16,3 @@ $justiceLeague = new Film("Justice League", "2017", 120, "Lorem Ipsum dolor sit 
 $superman = new Role("Superman", $henryCavill);
 $henryCavill->addRole($superman);
 $tomWelling->addRole($superman);
-echo var_dump($superman);

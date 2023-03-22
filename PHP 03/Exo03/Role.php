@@ -9,3 +9,4 @@ class Role
         $this->acteurs->addRole($this);
     }
 }
+?>

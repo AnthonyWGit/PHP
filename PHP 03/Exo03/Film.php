@@ -21,7 +21,7 @@ Class Film
     {
         $this->casting[] = ['actor' => $acteur, 'role' => $role];
     }
-    public function __toString()
+    public function afficherReal()
     {
         $result = "Réal : ".$this->realisateur. ".<br>";
         $result .= "Date Parution : ".$this->dateSortie.".<br>";
@@ -30,3 +30,4 @@ Class Film
         return $result;
     }
 }
+?>
