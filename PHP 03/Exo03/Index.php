@@ -1,12 +1,12 @@
 <?php
 include 'Personne.php';
 include 'Acteur.php';
-include 'Roles.php';
+include 'Role.php';
 include 'Film.php';
-include 'CatalogueFilms.php';
+include 'Casting.php';
 include 'Realisateur.php';
 
-/*
+
 $result ="";
 $billCosby = new Acteur("cosby", "bill", "homme", "1937");
 $zackSnyder = new Realisateur("Snyder","Zack", "homme", "1966");

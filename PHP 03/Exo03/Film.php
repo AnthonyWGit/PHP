@@ -1,32 +1,72 @@
 <?php
 class Film
 {
-    protected string $titre;
-    protected string $dateSortie;
-    protected string $duree;
-    protected Realisateur $realisateur;
-    protected string $synopsis;
-    protected string $genre;
-    protected $casting =[];
+    protected string $_titre;
+    protected string $_dateSortie;
+    protected int $_duree;
+    protected Realisateur $_realisateur;
+    protected string $_synopsis;
+    protected string $_genre;
+    protected $_casting =[];
     public function __construct(string $titre, string $dateSortie, string $duree, string $synopsis, string $genre, Realisateur $réalisateur) 
     {
-        $this->titre = $titre;
-        $this->dateSortie = $dateSortie;
-        $this->duree = $duree;
-        $this->synopsis = $synopsis;
-        $this->genre = $genre;
-        $this->realisateur->ajouterFilmRealise($this);
+        $this->_titre = $titre;
+        $this->_dateSortie = $dateSortie;
+        $this->_duree = $duree;
+        $this->_synopsis = $synopsis;
+        $this->_genre = $genre;
+        $this->_realisateur->ajouterFilmRealise($this);
     }
+    /*-----------------SeTTERS-------------------*/
+    public function setTitre(string $titre)
+    {
+        $this->_titre = $titre;
+    }
+    public function setDateSortie(string $dateSortie)
+    {
+        $this->_dateSortie = $dateSortie;
+    }
+    public function setDuree(int $duree)
+    {
+        $this->_duree = $duree;
+    }
+    public function setGenre(string $genre)
+    {
+        $this->_genre = $genre;
+    }
+    public function setSynopsis(string $synopsis)
+    {
+        $this->_synopsis = $synopsis;
+    }
+    /*------------GETTERS -----------------*/
+
+    public function getTitre() : string
+    {
+        return $this->_titre;
+    }
+    public function getDateSortie() : string
+    {
+        return $this->_dateSortie;
+    }
+    public function getDuree() : int
+    {
+        return $this->_duree;
+    }
+    public function getSynopsis() : string
+    {
+        return $this->_duree;
+    }
+// ______________________________________________________METHODES____________________________________________
       public function ajouterActeur($acteur, $role) 
     {
-        $this->casting[] = ['actor' => $acteur, 'role' => $role];
+        $this->_casting[] = ['actor' => $acteur, 'role' => $role];
     }
     public function afficherReal()
     {
-        $result = "Réal : ".$this->realisateur. ".<br>";
-        $result .= "Date Parution : ".$this->dateSortie.".<br>";
-        $result .= "Genre : ".$this->genre. ".<br>";
-        $result .= "Nom du film : ".$this->titre." $.<br>";
+        $result = "Réal : ".$this->_realisateur. ".<br>";
+        $result .= "Date Parution : ".$this->_dateSortie.".<br>";
+        $result .= "Genre : ".$this->_genre. ".<br>";
+        $result .= "Nom du film : ".$this->_titre." $.<br>";
         return $result;
     }
 }
