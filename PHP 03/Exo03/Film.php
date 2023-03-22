@@ -8,7 +8,7 @@ class Film
     protected string $_synopsis;
     protected string $_genre;
     protected $_casting =[];
-    public function __construct(string $titre, string $dateSortie, string $duree, string $synopsis, string $genre, Realisateur $réalisateur) 
+    public function __construct(string $titre, string $dateSortie, int $duree, string $synopsis, string $genre, Realisateur $réalisateur) 
     {
         $this->_titre = $titre;
         $this->_dateSortie = $dateSortie;
