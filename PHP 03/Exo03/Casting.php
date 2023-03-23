@@ -28,25 +28,5 @@ class Casting
     {
         return $this->_acteur->getNom()." ".$this->_acteur->getPrenom();
     }
-    /*
-    function ajouterFilm($film) 
-    
-    {
-        $this->_films[] = $film;
-        $realisateur = $film->realisateur;
-        $realisateur->ajouterFilm($film);
-        foreach ($film->acteurs as $acteur) {
-            if (!isset($this->acteurs[$acteur->nom])) 
-            {
-                $this->acteurs[$acteur->nom] = $acteur;
-            }
-            $this->acteurs[$acteur->nom]->ajouterRole(key($acteur->roles), $film);
-        }
-        if (!isset($this->realisateurs[$realisateur->nom])) 
-        {
-            $this->realisateurs[$realisateur->nom] = $realisateur;
-        }
-    }
-    */
 }
 ?>
