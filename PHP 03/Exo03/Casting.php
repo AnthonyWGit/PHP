@@ -18,15 +18,15 @@ class Casting
 
     public function getRole() : string
     {
-        return $this->_role;
+        return $this->_role->getRole();
     }
     public function getFilm() : string
-    {
-        return $this->_film;
+    {   
+        return $this->_film->getTitre();
     }
     public function getActeur() : string
     {
-        return $this->_acteur;
+        return $this->_acteur->getNom()." ".$this->_acteur->getPrenom();
     }
     /*
     function ajouterFilm($film) 
