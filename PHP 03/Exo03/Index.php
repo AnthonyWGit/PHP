@@ -29,4 +29,4 @@ $danseAvecLesloups = new Casting($LtJohnJDunba, $danseAvecLesloups, $kevinCostne
 echo $justiceLeague->afficherReal();
 echo $zackSnyder->afficherFilmo();
 echo $henryCavill->afficherFilmoActeur();
-echo $danseAvecLesloups->getCasting();
+echo $danseAvecLesloups->afficherCasting();

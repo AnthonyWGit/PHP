@@ -66,5 +66,14 @@ class Film
         $result = $this->_realisateur->getPrenom();
         return $result;
     }
+    public function AfficherCasting()
+{
+    $result = "Film : " . $this->_titre . "<br>";
+    foreach($this->_castings as $casting)
+    {
+        $result .= $casting->getRole() . " a été incarné par " . $casting->getActeur() . "<br>";
+    }
+    return $result;
+}    
 }
 ?>
