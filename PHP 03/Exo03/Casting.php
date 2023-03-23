@@ -26,7 +26,7 @@ class Casting
     }
     public function getActeur() : Acteur
     {
-        return $this->_acteurs;
+        return $this->_acteur;
     }
     /*
     function ajouterFilm($film) 

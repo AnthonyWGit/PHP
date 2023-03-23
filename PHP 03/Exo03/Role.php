@@ -18,7 +18,7 @@ class Role
     {
         $this->_role = $role;
     }
-    public function addCasting(Casting $casting)
+    public function ajouterCasting(Casting $casting)
     {
         $this->_castings[] = $casting;
     }
