@@ -33,7 +33,7 @@ class Film
     {
         $this->_duree = $duree;
     }
-    public function setGenre(string $genre)
+    public function setGenre(Genre $genre)
     {
         $this->_genre = $genre;
     }
