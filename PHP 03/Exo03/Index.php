@@ -23,7 +23,7 @@ $justiceLeague = new Film("Justice League", "2017", 120, "Lorem Ipsum dolor sit 
 $justiceLeague5 = new Film("Justice League", "2017", 120, "Lorem Ipsum dolor sit amet consectetur adip", "Super-Héro", $zackSnyder);
 $danseAvecLesloups = new Film("Danse avec les Loups", "1990", 181, "DDDDDDDDDDDOOOOOOOOOOOOOOOO", "Western", $kevinCostnerR);
 //Instancier Casting
-$danseAvecLesloups = new Casting($LtJohnJDunba, $danseAvecLesloups, $kevinCostnerA);
+$castingDanseAvecLesloups = new Casting($LtJohnJDunba, $danseAvecLesloups, $kevinCostnerA);
 
 //Affichage
 echo $justiceLeague->afficherReal();
