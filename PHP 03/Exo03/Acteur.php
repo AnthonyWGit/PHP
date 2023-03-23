@@ -3,7 +3,7 @@ class Acteur extends Personne
 {
   protected Role $_role;
   protected array $_castings; // $_castingS : c'est tout l'ensemble des casting donc tous les films dans lesquels l'acteur a joué
-  public function __construct(string $nom, string $prenom, string $sexe, string $dateNaissance) 
+  public function __construct(string $nom, string $prenom, string $sexe, string $dateNaissance, Role $role) 
   {
     parent::__construct($nom, $prenom, $sexe, $dateNaissance);
     $this->_castings = [];
