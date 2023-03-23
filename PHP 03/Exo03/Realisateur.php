@@ -21,7 +21,7 @@ class Realisateur extends Personne
   {
     $this->_filmsRealises[] = $film;
   }
-
+//-----------------------METHODES-----------------------------
   public function afficherFilmo()
   {
   $result = "<p>". $this->getNom() . " " . $this->getPrenom() . " a réalisé :</p>";
