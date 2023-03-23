@@ -20,4 +20,18 @@ Class Genre
     {
         return $this->_nomGenre;
     }
+    public function ajouterFilm(Film $film)
+    {
+        $this->_films[] = $film;
+    }
+    ////////______________METHODES_______________________
+    public function FilmGenre()
+    {
+        $result .= "Voici la liste des films classés dans le genre".$this->_nomGenre." <br>";
+        foreach ($this->_films as $films)
+        {
+            $result .= $films->getTitre()." <br>";
+        }
+        return $result;
+    }
 }
