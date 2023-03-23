@@ -1,19 +1,19 @@
 <?php
 class Realisateur extends Personne
 {
-  protected array $filmsRealises;
+  protected array $_filmsRealises;
   public function __construct(string $nom, string $prenom, string $sexe, string $dateNaissance) 
   {
     parent::__construct($nom, $prenom, $sexe, $dateNaissance);
-    $this->filmsRealises = array();
+    $this->_filmsRealises = array();
   }
   public function ajouterFilmRealise($film) 
   {
-    $this->filmsRealises[] = $film;
+    $this->_filmsRealises[] = $film;
   }
   public function getFilmsRealises()
   {
-    return $this->filmsRealises;
+    return $this->_filmsRealises;
   }
   public function afficherFilmo()
   {
