@@ -1,7 +1,7 @@
 <?php
 class Realisateur extends Personne
 {
-  protected array $_filmsRealises;
+  private array $_filmsRealises; 
   public function __construct(string $nom, string $prenom, string $sexe, string $dateNaissance) 
   {
     parent::__construct($nom, $prenom, $sexe, $dateNaissance);

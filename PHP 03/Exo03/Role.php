@@ -1,9 +1,9 @@
 <?php
 class Role 
 {
-    public string $_role;
-    public array $_roles;
-    public array $_castings;
+    private string $_role;
+    private array $_roles;
+    private array $_castings;
     public function __construct(string $role)
     {
         $this->_castings = [];
