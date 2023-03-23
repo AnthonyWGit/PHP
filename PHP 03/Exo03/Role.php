@@ -25,7 +25,7 @@ class Role
 
     public function afficherActeurRole()
     {
-        $result = "Ils ont joué dans ";
+        $result = "Ils ont joué le rôle de : ".$this->_role. "<br>";
         foreach ($this->_castings as $casting)
         {
             $result .= $casting->getActeur()."<br>";
