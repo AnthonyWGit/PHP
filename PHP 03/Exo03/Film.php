@@ -67,13 +67,13 @@ class Film
         return $result;
     }
     public function afficherCasting()
-{
-    $result = "Film : " . $this->_titre . "<br>";
-    foreach($this->_castings as $casting)
     {
+        $result = "Film : " . $this->_titre . "<br>";
+        foreach($this->_castings as $casting)
+        {
         $result .= $casting->getRole() . " a été incarné par " . $casting->getActeur() . "<br>";
-    }
+        }
     return $result;
-}    
+    }       
 }
 ?>
