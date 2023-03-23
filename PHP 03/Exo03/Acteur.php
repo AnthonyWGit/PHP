@@ -8,18 +8,18 @@ class Acteur extends Personne
     parent::__construct($nom, $prenom, $sexe, $dateNaissance);
     $this->_castings = [];
   }  
-  // PRENDRE UN ACTEUR / METTRE UN FILM DANS LA RRAY ROLES/
+
   public function ajouterCasting(Casting $casting) 
   {
     $this->_castings[] = $casting;
   }
-  public function getCasting() 
+  public function getCasting() : array
   {
     return $this->_castings;
   }
-  public function afficherFilmoActeur()
+  public function afficherFilmoActeur() : string
   {
-    $result = $this->getNom()." ".$this->getPrenom(). "a joué dans ";
+    $result = $this->getPrenom()." ".$this->getNom(). " a joué dans ";
     foreach ($this->_castings as $casting)
     {
       $result.=$casting->getFilm()."<br>";
