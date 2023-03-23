@@ -40,7 +40,6 @@ class Film
         $this->_synopsis = $synopsis;
     }
     /*------------GETTERS -----------------*/
-
     public function getTitre() : string
     {
         return $this->_titre;
@@ -67,6 +66,5 @@ class Film
         $result = $this->_realisateur->getPrenom();
         return $result;
     }
-
 }
 ?>
