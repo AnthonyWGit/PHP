@@ -17,6 +17,14 @@ class Acteur extends Personne
   {
     return $this->_castings;
   }
-  public function 
+  public function afficherFilmoActeur()
+  {
+    $result .= $this->getNom()." ".$this->getPrenom(). "a joué dans";
+    foreach ($this->_castings as $casting)
+    {
+      $result.=$casting->getFilmsRealises()."<br";
+    }
+    return $result;
+  }
 }
 ?>

@@ -17,7 +17,8 @@ $meteorman = new Film("Meteor Man", "1993", 100,"string blabla²", "Comédie", $
 $justiceLeague = new Film("Justice League", "2017", 120, "Lorem Ipsum dolor sit amet consectetur adip", "Super-Héro", $zackSnyder);
 $justiceLeague5 = new Film("Justice League", "2017", 120, "Lorem Ipsum dolor sit amet consectetur adip", "Super-Héro", $zackSnyder);
 $superman = new Role("Superman", $henryCavill);
-$henryCavill->addRole($superman);
-$tomWelling->addRole($superman);
+//$henryCavill->addRole($superman);
+//$tomWelling->addRole($superman);
 echo $justiceLeague->afficherReal();
 echo $zackSnyder->afficherFilmo();
+$henryCavill->afficherFilmoActeur();
