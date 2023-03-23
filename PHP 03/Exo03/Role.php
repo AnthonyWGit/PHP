@@ -10,10 +10,12 @@ class Role
         $this->_role = $role;
         $this->_roles = [];
     }
+    // --------------------------------------GETTERS-----------------------------
     public function getRole() : string
     {
         return $this->_role;
     }
+    // -------------------------------------SETTERS--------------------------
     public function setRole($role)
     {
         $this->_role = $role;
@@ -22,11 +24,10 @@ class Role
     {
         $this->_castings[] = $casting;
     }
-
     public function afficherActeurRole()
     {
         $result = "Ils ont joué le rôle de : ".$this->_role. "<br>";
-        foreach ($this->_castings as $casting)
+        foreach ($this->_castings as $casting) //Pour parcourir tous les castings, ligne par ligne
         {
             $result .= $casting->getActeur()."<br>";
         }
