@@ -5,8 +5,6 @@ include 'Role.php';
 include 'Film.php';
 include 'Casting.php';
 include 'Realisateur.php';
-
-
 $result ="";
 //Instancier Real
 $zackSnyder = new Realisateur("Snyder","Zack", "homme", "1966");
@@ -22,7 +20,6 @@ $christopherReeves = new Acteur("Reeves", "Christopher", "homme", "1952", $super
 //Instancier genres de film
 $superHeros = new Genre("Super-Héros");
 $western = new Genre("Western");
-
 //instancier Films
 $justiceLeague = new Film("Justice League", "2017", 120, "Lorem Ipsum dolor sit amet consectetur adip", $superHeros, $zackSnyder);
 $justiceLeague5 = new Film("Justice League", "2017", 120, "Lorem Ipsum dolor sit amet consectetur adip", $superHeros, $zackSnyder);
