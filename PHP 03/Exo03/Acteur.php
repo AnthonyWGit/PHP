@@ -11,7 +11,7 @@ class Acteur extends Personne
   // PRENDRE UN ACTEUR / METTRE UN FILM DANS LA RRAY ROLES/
   public function addCasting(Casting $casting) 
   {
-    $this->_castings = $casting;
+    $this->_castings[] = $casting;
   }
   public function getCasting() 
   {
