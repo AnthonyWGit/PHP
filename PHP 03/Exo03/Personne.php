@@ -1,6 +1,7 @@
 <?php
 class Personne 
 {
+    //Protected pour que d'autres classes puissent hériter de Personne
     protected string $_nom;
     protected string $_prenom;
     protected string $_sexe;
