@@ -16,15 +16,15 @@ class Casting
     }
 // GETTERS 
 
-    public function getRole() : Role
+    public function getRole() : string
     {
         return $this->_role;
     }
-    public function getFilm() : Film
+    public function getFilm() : string
     {
         return $this->_film;
     }
-    public function getActeur() : Acteur
+    public function getActeur() : string
     {
         return $this->_acteur;
     }
