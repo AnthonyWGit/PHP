@@ -7,7 +7,7 @@ class Film
     protected Realisateur $_realisateur;
     protected string $_synopsis;
     protected string $_genre;
-    protected $_casting =[];
+    protected $_castings =[];
     public function __construct(string $titre, string $dateSortie, int $duree, string $synopsis, string $genre, Realisateur $realisateur) 
     {
         $this->_realisateur = $realisateur;
@@ -57,9 +57,9 @@ class Film
         return $this->_duree;
     }
 // ______________________________________________________METHODES____________________________________________
-      public function ajouterActeur($acteur, $role) 
+      public function ajouterCasting(Casting $casting) 
     {
-        $this->_casting[] = ['actor' => $acteur, 'role' => $role];
+        $this->_castings[] = $casting;
     }
     public function afficherReal()
     {

@@ -3,28 +3,30 @@ class Casting
 {
     public Role $_role;
     public Film $_film;
-    public Acteur $_acteurs;
+    public Acteur $_acteur;
     
-    function __construct(Role $role, Film $film, Acteur $acteurs)
+    function __construct(Role $role, Film $film, Acteur $acteur)
     {
         $this->_role = $role;
         $this->_film = $film;
-        $this->_acteurs = $acteurs;
-        $this->_acteurs->addCasting($this);
+        $this->_acteur = $acteur;
+        $this->_acteur->ajouterCasting($this);
+        $this->_film->ajouterCasting($this);
+        $this->_role->ajouterCasting($this);
     }
-    function getCasting() 
+// GETTERS 
+
+    public function getRole() : Role
     {
-        $casting = array();
-        foreach ($this->_acteurs as $acteur) 
-        {
-            $casting[$acteur->nom] = array(
-                'prenom' => $acteur->prenom,
-                'sexe' => $acteur->sexe,
-                'dateNaissance' => $acteur->dateNaissance,
-                'roles' => $acteur->roles
-            );
-        }
-        return $casting;
+        return $this->_role;
+    }
+    public function getFilm() : Film
+    {
+        return $this->_film;
+    }
+    public function getActeur() : Acteur
+    {
+        return $this->_acteurs;
     }
     /*
     function ajouterFilm($film) 
