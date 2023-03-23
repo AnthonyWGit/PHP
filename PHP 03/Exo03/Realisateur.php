@@ -1,8 +1,8 @@
 <?php
 class Realisateur extends Personne
 {
-  protected $filmsRealises;
-  public function __construct($nom, $prenom, $sexe, $dateNaissance) 
+  protected array $filmsRealises;
+  public function __construct(string $nom, string $prenom, string $sexe, string $dateNaissance) 
   {
     parent::__construct($nom, $prenom, $sexe, $dateNaissance);
     $this->filmsRealises = array();
@@ -15,6 +15,14 @@ class Realisateur extends Personne
   {
     return $this->filmsRealises;
   }
-
+  public function afficherFilmo()
+  {
+  $result = "<p>". $this->getNom() . " " . $this->getPrenom() . " a réalisé :</p>";
+  foreach($this->_filmsRealises as $film)
+  {
+      $result .= $film->getTitre() . "<br>";
+  }
+  return $result;
+  }
 }
 ?>
