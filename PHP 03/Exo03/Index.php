@@ -5,6 +5,7 @@ include 'Role.php';
 include 'Film.php';
 include 'Casting.php';
 include 'Realisateur.php';
+include 'Genre.php';
 $result ="";
 //Instancier Real
 $zackSnyder = new Realisateur("Snyder","Zack", "homme", "1966");
