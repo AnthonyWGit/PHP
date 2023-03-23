@@ -8,7 +8,6 @@ class Acteur extends Personne
     parent::__construct($nom, $prenom, $sexe, $dateNaissance);
     $this->_castings = [];
   }  
-
   public function ajouterCasting(Casting $casting) 
   {
     $this->_castings[] = $casting;

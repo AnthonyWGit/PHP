@@ -1,13 +1,13 @@
 <?php
 class Film
 {
-    protected string $_titre;
-    protected string $_dateSortie;
-    protected int $_duree;
-    protected Realisateur $_realisateur;
-    protected string $_synopsis;
-    protected Genre $_genre;
-    protected $_castings =[];
+    private string $_titre;
+    private string $_dateSortie;
+    private int $_duree;
+    private Realisateur $_realisateur;
+    private string $_synopsis;
+    private Genre $_genre;
+    private $_castings =[];
     public function __construct(string $titre, string $dateSortie, int $duree, string $synopsis, genre $genre, Realisateur $realisateur) 
     {
         $this->_realisateur = $realisateur;
@@ -59,16 +59,16 @@ class Film
         return $this->_duree;
     }
 // ______________________________________________________METHODES____________________________________________
-      public function ajouterCasting(Casting $casting) 
+      public function ajouterCasting(Casting $casting)
     {
         $this->_castings[] = $casting;
     }
-    public function afficherReal()
+    public function afficherReal() : string
     {
         $result = $this->_realisateur->getPrenom();
         return $result;
     }
-    public function afficherCasting()
+    public function afficherCasting() : string
     {
         $result = "Film : " . $this->_titre . "<br>";
         foreach($this->_castings as $casting)
