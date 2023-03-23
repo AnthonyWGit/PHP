@@ -17,6 +17,7 @@ class Film
         $this->_synopsis = $synopsis;
         $this->_genre = $genre;
         $this->_realisateur->ajouterFilmRealise($this);
+        
     }
     /*-----------------SeTTERS-------------------*/
     public function setTitre(string $titre)

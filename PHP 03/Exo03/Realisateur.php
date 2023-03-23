@@ -6,15 +6,22 @@ class Realisateur extends Personne
   {
     parent::__construct($nom, $prenom, $sexe, $dateNaissance);
     $this->_filmsRealises = array();
+  } 
+  // ----------------SETTERS -------------------
+  public function setFilmRealises($filmsRealises)
+  {
+    $this->_filmsRealises = $filmsRealises;
+  }
+  //--------------------GETTERS--------------------
+   public function getFilmsRealises()
+  {
+    return $this->_filmsRealises;
   }
   public function ajouterFilmRealise($film) 
   {
     $this->_filmsRealises[] = $film;
   }
-  public function getFilmsRealises()
-  {
-    return $this->_filmsRealises;
-  }
+
   public function afficherFilmo()
   {
   $result = "<p>". $this->getNom() . " " . $this->getPrenom() . " a réalisé :</p>";
