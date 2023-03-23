@@ -66,7 +66,7 @@ class Film
         $result = $this->_realisateur->getPrenom();
         return $result;
     }
-    public function AfficherCasting()
+    public function afficherCasting()
 {
     $result = "Film : " . $this->_titre . "<br>";
     foreach($this->_castings as $casting)
