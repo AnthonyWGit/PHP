@@ -26,7 +26,7 @@ Class Genre
         $this->_films[] = $film;
     }
 
-    public function FilmGenre()
+    public function FilmGenre() : string //fonction d'affichage
     {
         $result .= "Voici la liste des films classés dans le genre".$this->_nomGenre." <br>";
         foreach ($this->_films as $films)
