@@ -19,10 +19,10 @@ class Acteur extends Personne
   }
   public function afficherFilmoActeur()
   {
-    $result = $this->getNom()." ".$this->getPrenom(). "a joué dans";
+    $result = $this->getNom()." ".$this->getPrenom(). "a joué dans ";
     foreach ($this->_castings as $casting)
     {
-      $result.=$casting->getFilmsRealises()."<br";
+      $result.=$casting->getFilm()."<br>";
     }
     return $result;
   }
