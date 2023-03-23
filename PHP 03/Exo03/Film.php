@@ -6,9 +6,9 @@ class Film
     protected int $_duree;
     protected Realisateur $_realisateur;
     protected string $_synopsis;
-    protected string $_genre;
+    protected Genre $_genre;
     protected $_castings =[];
-    public function __construct(string $titre, string $dateSortie, int $duree, string $synopsis, string $genre, Realisateur $realisateur) 
+    public function __construct(string $titre, string $dateSortie, int $duree, string $synopsis, genre $genre, Realisateur $realisateur) 
     {
         $this->_realisateur = $realisateur;
         $this->_titre = $titre;
@@ -16,8 +16,9 @@ class Film
         $this->_duree = $duree;
         $this->_synopsis = $synopsis;
         $this->_genre = $genre;
+        $this->_genre->ajouterFilm($this);
         $this->_realisateur->ajouterFilmRealise($this);
-        
+
     }
     /*-----------------SeTTERS-------------------*/
     public function setTitre(string $titre)
