@@ -30,3 +30,4 @@ echo $justiceLeague->afficherReal();
 echo $zackSnyder->afficherFilmo();
 echo $henryCavill->afficherFilmoActeur();
 echo $danseAvecLesloups->afficherCasting();
+echo $superman->afficherActeurRole();
